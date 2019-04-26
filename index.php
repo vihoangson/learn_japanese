@@ -23,7 +23,7 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="coloring_element.js"></script>
-
+    <script src="audio_speak.js"></script>
     <script src="com.js"></script>
     <link rel="stylesheet" href="http://study-japanese.vinaweber.com/style.css">
 <style>
@@ -36,6 +36,10 @@
 </style>
 </head>
 <body>
+<audio  id="audio-speak" src="audio_hiragana/a.mp3">
+
+    Your browser does not support the audio element.
+</audio>
 
 <div id="loading" class="margin-top-20 text text-danger">Đang tải data ...</div>
 

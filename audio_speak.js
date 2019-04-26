@@ -1,0 +1,7 @@
+
+var audiospeak = {
+
+    init: function () {
+    },
+
+};

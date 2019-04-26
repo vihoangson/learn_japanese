@@ -22,6 +22,8 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="coloring_element.js"></script>
+
     <script src="com.js"></script>
     <link rel="stylesheet" href="http://study-japanese.vinaweber.com/style.css">
 <style>

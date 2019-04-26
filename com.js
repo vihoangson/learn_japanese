@@ -52,52 +52,6 @@ var getData = function(){
         }
     })
 }
-var coloring_element = {
-    num1 : -1,
-    num2 : -1,
-    init: function(){
-        $("li.active").click(function(){
-            e = $(this);
-            if (coloring_element.num2 != 0) {
-                coloring_element.reset_coloring();
-                coloring_element.num1 = parseInt(e.find(".number").first().html());
-                coloring_element.num2 = 0;
-            } else {
-                coloring_element.num2 = parseInt(e.find(".number").first().html());
-                if (coloring_element.num2 < coloring_element.num1) {
-                    t = coloring_element.num2;
-                    coloring_element.num2 = coloring_element.num1;
-                    coloring_element.num1 = t;
-                }
-                coloring_element.set_value_for_input();
-            }
-            coloring_element.draw_coloring();
-        })
-
-    },
-    reset_coloring: function () {
-        $("li.active").removeClass('coloring');
-    },
-    draw_coloring: function () {
-        $("li.active").each(function () {
-            cur = parseInt($(this).find(".number").first().html());
-
-            if (coloring_element.num2 == 0) {
-                if (coloring_element.num1 <= cur && cur <= coloring_element.num1) {
-                    $(this).addClass('coloring');
-                }
-            } else {
-                if (coloring_element.num1 <= cur && cur <= coloring_element.num2) {
-                    $(this).addClass('coloring');
-                }
-            }
-        })
-    },
-    set_value_for_input: function () {
-        $("#input-from").val(coloring_element.num1);
-        $("#input-to").val(coloring_element.num2);
-    }
-};
 
 var init = function(){
     arrConcat = hiragana.concat(katakana);
@@ -105,6 +59,11 @@ var init = function(){
     $('#input-to').val(getCookie('inputTo'))
     prevList();
     $('#setup-range').show();
+    coloring_element.setValue({
+        selectorElement:'li.active',
+        selectorInputFrom:'#input-from',
+        selectorInputTo:'#input-to',
+    });
     coloring_element.init();
 }
 

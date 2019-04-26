@@ -24,6 +24,14 @@
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="com.js"></script>
     <link rel="stylesheet" href="http://study-japanese.vinaweber.com/style.css">
+<style>
+    li.active{
+        cursor: pointer;
+    }
+    .coloring{
+        background: #effdff;
+    }
+</style>
 </head>
 <body>
 

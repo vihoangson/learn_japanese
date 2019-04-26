@@ -51,8 +51,6 @@ var getData = function () {
         }
     })
 }
-var num1;
-var num2;
 
 var init = function () {
     arrConcat = hiragana.concat(katakana);
@@ -62,48 +60,55 @@ var init = function () {
     $('#setup-range').show();
 
     $("li.active").click(function () {
-        if (num2 != 0) {
-            reset_coloring();
-            num1 = parseInt($(this).find(".number").first().html());
-            num2 = 0;
+        coloring_element.init($(this));
+    })
+}
+
+var coloring_element = {
+    num1 : -1,
+    num2 : -1,
+    init: function(e){
+        if (coloring_element.num2 != 0) {
+            coloring_element.reset_coloring();
+            coloring_element.num1 = parseInt(e.find(".number").first().html());
+            coloring_element.num2 = 0;
         } else {
-            num2 = parseInt($(this).find(".number").first().html());
-            if (num2 < num1) {
-                t = num2;
-                num2 = num1;
-                num1 = t;
+            coloring_element.num2 = parseInt(e.find(".number").first().html());
+            if (coloring_element.num2 < coloring_element.num1) {
+                t = coloring_element.num2;
+                coloring_element.num2 = coloring_element.num1;
+                coloring_element.num1 = t;
             }
-
-            set_value_for_input();
+            coloring_element.set_value_for_input();
         }
-        draw_coloring();
-    })
-}
+        coloring_element.draw_coloring();
+    },
+    reset_coloring: function () {
+        $("li.active").removeClass('coloring');
+    },
+    draw_coloring: function () {
+        $("li.active").each(function () {
+            cur = parseInt($(this).find(".number").first().html());
 
-function reset_coloring() {
-    $("li.active").removeClass('coloring');
-}
-
-function draw_coloring() {
-    $("li.active").each(function () {
-        cur = parseInt($(this).find(".number").first().html());
-
-        if(num2==0){
-            if (num1 <= cur && cur <= num1) {
-                $(this).addClass('coloring');
+            if (coloring_element.num2 == 0) {
+                if (coloring_element.num1 <= cur && cur <= coloring_element.num1) {
+                    $(this).addClass('coloring');
+                }
+            } else {
+                if (coloring_element.num1 <= cur && cur <= coloring_element.num2) {
+                    $(this).addClass('coloring');
+                }
             }
-        }else{
-            if (num1 <= cur && cur <= num2) {
-                $(this).addClass('coloring');
-            }
-        }
+        })
+        console.log(coloring_element.num1);
+        console.log(coloring_element.num2);
+    },
+    set_value_for_input: function () {
+        $("#input-from").val(coloring_element.num1);
+        $("#input-to").val(coloring_element.num2);
+    }
+};
 
-    })
-}
-function set_value_for_input(){
-    $("#input-from").val(num1);
-    $("#input-to").val(num2);
-}
 
 var startPratice = function () {
     resetPracice();

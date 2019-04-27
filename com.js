@@ -168,7 +168,8 @@ var random_char = function(){
     }
     //alert(currentKey)
 
-    $('#show-char').text(currentArray[currentKey][1]);
+    $('#show-char').html('<span class="font-mincho" style="margin:0 2px;"><span>'+currentArray[currentKey][1]+'</span></span> ');
+    $('#show-char').append('<span class="font-normal"><span>'+currentArray[currentKey][1]+'</span></span>');
     console.log(max)
     console.log(currentKey)
 }

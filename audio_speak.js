@@ -1,9 +1,9 @@
 var audiospeak = {
     init: function () {
-
-        $("#list-char li").click(function () {
-            console.log($(this).prop("class"));
-            //audiospeak.speak(romanji_char);
+        $(document).on('click', '.list-char li', function () {
+            str = $(this).attr('class').split(' ')[0];
+            res = str.replace("char-h", "");
+            audiospeak.speak(res);
         });
     },
     speak: function (romanji_char) {

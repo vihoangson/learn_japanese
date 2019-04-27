@@ -1,9 +1,9 @@
-.font-mincho li.active, .font-mincho #show-char, .font-mincho #show-result {
+.font-mincho li.active, .font-mincho #show-char, .font-mincho #show-result, .font-mincho span {
     font-family: 'Sawarabi Mincho', sans-serif;
 }
 
-.font-normal li.active, .font-normal #show-char, .font-normal #show-result {
-/ / font-family: 'Sawarabi Mincho', sans-serif;
+.font-normal li.active, .font-normal #show-char, .font-normal #show-result, .font-normal span {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 li.active {

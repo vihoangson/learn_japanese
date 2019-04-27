@@ -113,8 +113,8 @@ var check_char = function(x){
     var char_type= currentArray[currentKey][2];
     loadResult()
 
-    $("#audio-speak").attr('src','audio_hiragana/'+romanji_char+'.mp3');
-    $("#audio-speak")[0].play();
+    audiospeak.speak(romanji_char);
+
 
     if(input_value == romanji_char){
         $('#message-result').html('<i class="far fa-grin-beam"></i> : '+input_value);

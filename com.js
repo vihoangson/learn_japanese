@@ -66,6 +66,8 @@ var init = function(){
     });
     coloring_element.init();
     audiospeak.init();
+    changefont.init();
+
 }
 
 var startPratice = function(){

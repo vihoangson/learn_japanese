@@ -1,0 +1,15 @@
+.font-mincho li.active, .font-mincho #show-char, .font-mincho #show-result {
+    font-family: 'Sawarabi Mincho', sans-serif;
+}
+
+.font-normal li.active, .font-normal #show-char, .font-normal #show-result {
+/ / font-family: 'Sawarabi Mincho', sans-serif;
+}
+
+li.active {
+    cursor: pointer;
+}
+
+.coloring {
+    background: #effdff;
+}

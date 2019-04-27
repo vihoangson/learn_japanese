@@ -10,6 +10,7 @@
             integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
             crossorigin="anonymous"></script>
 
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -24,16 +25,14 @@
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="coloring_element.js"></script>
     <script src="audio_speak.js"></script>
+    <script src="change_font.js"></script>
+
     <script src="com.js"></script>
+
     <link rel="stylesheet" href="http://study-japanese.vinaweber.com/style.css">
-<style>
-    li.active{
-        cursor: pointer;
-    }
-    .coloring{
-        background: #effdff;
-    }
-</style>
+
+    <link rel="stylesheet" href="style_custom.css">
+
 </head>
 <body>
 <audio  id="audio-speak" src="audio_hiragana/a.mp3">

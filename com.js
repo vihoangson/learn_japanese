@@ -101,7 +101,6 @@ var resetData = function(){
 }
 
 
-
 var check_char = function(x){
     var input_value = $('#typing').val().trim().toLowerCase();
     if(input_value == ''){
@@ -114,10 +113,13 @@ var check_char = function(x){
     var char_type= currentArray[currentKey][2];
     loadResult()
 
+
     audiospeak.speak(romanji_char);
 
 
     if(input_value == romanji_char){
+        counttime.catchtime(romanji_char);
+
         $('#message-result').html('<i class="far fa-grin-beam"></i> : '+input_value);
         class_status = 'bg-success';
         currentArray.splice(currentKey,1)
@@ -131,7 +133,6 @@ var check_char = function(x){
     else{
         $('#message-result').html('<i class="far fa-frown"></i> : '+input_value);
         class_status = 'bg-danger';
-
     }
 
     $('#show-result').addClass(class_status);
@@ -144,6 +145,8 @@ var check_char = function(x){
     $('#typing').val('');
     $('#typing').focus();
     if(max < 0){
+        counttime.complete_counttime();
+        counttime.resettime();
         $('.group-typing').hide();
         $('#btn-reset').focus()
         showMessage('success','Báº¡n Ä‘Ă£ hoĂ n thĂ nh bĂ i táº­p ')
@@ -167,7 +170,6 @@ var random_char = function(){
     else{
         currentKey = 0;
     }
-    //alert(currentKey)
 
     $('#show-char').html('<span class="font-mincho" style="margin:0 2px;"><span>'+currentArray[currentKey][1]+'</span></span> ');
     $('#show-char').append('<span class="font-normal"><span>'+currentArray[currentKey][1]+'</span></span>');

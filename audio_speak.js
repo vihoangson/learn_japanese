@@ -3,6 +3,7 @@ var audiospeak = {
         $(document).on('click', '.list-char li', function () {
             str = $(this).attr('class').split(' ')[0];
             res = str.replace("char-h", "");
+            res = str.replace("char-k", "");
             audiospeak.speak(res);
         });
     },

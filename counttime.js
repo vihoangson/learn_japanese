@@ -1,0 +1,7 @@
+var counttime = {
+    init: function () {
+
+    }
+
+
+};

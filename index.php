@@ -26,6 +26,7 @@
     <script src="coloring_element.js"></script>
     <script src="audio_speak.js"></script>
     <script src="change_font.js"></script>
+    <script src="counttime.js.js"></script>
 
     <script src="com.js"></script>
 

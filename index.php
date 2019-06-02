@@ -33,6 +33,9 @@
 
     <link rel="stylesheet" href="style_custom.css">
 
+    <link rel="stylesheet/less" type="text/css" href="styles.less" />
+    <script src="less.min.js" ></script>
+
 </head>
 <body>
 <audio  id="audio-speak" src="audio_hiragana/a.mp3">
@@ -53,13 +56,14 @@
             <ul class="list margin-top-20 list-char" id="prev-hiragana">
 
             </ul>
+            <div class="clearfix"></div>
             <h4 class="text-center">Katakana</h4>
             <ul class="list margin-top-20 list-char" id="prev-katakana">
 
             </ul>
         </div>
 
-        <div class="col-sm-12">
+        <div class="col-sm-12"  id="block-choose">
             <label class="col-sm-2 text-right">Chọn từ số : </label>
             <div class="col-sm-1 form-group">
                 <input value="1" id="input-from" type="number" class="form-control"/>

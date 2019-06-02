@@ -10,7 +10,7 @@ var max = 0;
 var currentKey = '';
 var currentArray = [];
 
-var result_default = '<span style="font-size:11px">click Ä‘á»ƒ xem Ä‘Ă¡p Ă¡n </span>';
+var result_default = '<span style="font-size:11px">Click vào để xem đáp án </span>';
 
 
 var getData = function(){
@@ -104,7 +104,7 @@ var resetData = function(){
 var check_char = function(x){
     var input_value = $('#typing').val().trim().toLowerCase();
     if(input_value == ''){
-        showMessage('danger','HĂ£y gĂµ chá»¯ Ä‘i nĂ o !');
+        showMessage('danger','Hãy nhập vào nào !');
         return;
     }
 

@@ -13,3 +13,15 @@ li.active {
 .coloring {
     background: #effdff;
 }
+
+.list-char li {
+    float: left;
+    list-style: none;
+    width: 43px;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin: 5px;
+}
+.practice{
+	display: none;
+}
